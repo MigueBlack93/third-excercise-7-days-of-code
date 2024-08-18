@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¿Qué lenguajes prefieres?</title>
-    <meta>
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico">
+    <meta name="author" content="Miguel Ulmi">
 </head>
 <body>
     <header>
@@ -12,11 +13,78 @@
     </header>
 
     <main>
+        <section id="first">
+            <label>Elige la rama de desarrollo web:</label>
+            <select name="rama" id="rama">
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+            </select>
+            <button id="next0" onclick="nextPage1()">Siguiente</button>
+        </section>
 
+        <section id="second" hidden>
+            <label>Elige el lenguaje que quieres aprender:</label>
+            <select name="language" id="language">
+                <option value="React" id="react">React</option>
+                <option value="Vue" id="vue">Vue</option>
+                <option value="C#" id="c#" hidden>C#</option>
+                <option value="Java" id="java" hidden>Java</option>
+            </select>
+            <label>Elige la opción deseada:</label>
+            <select name="specialize" id="specialize">
+                <option value="Prefiero seguir especializándome en el área">Prefieres seguir especializándote en el área seleccionada anteriormente</option>
+                <option value="Prefiero convertirme en desarrollador Fullstack">Prefieres convertirte en desarrollador Fullstack</option>
+            </select>
+            <button id="next1" onclick="nextPage2()">Siguiente</button>
+        </section>
+
+        <section id="third" hidden>
+            <label>¿Hay alguna otra tecnología que te gustaría aprender?
+                <input list="other-technologies" id="other-tech">
+                <datalist id="other-technologies">
+                    <option value="Python">Python</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="PHP">PHP</option>
+                    <option value="C++">C++</option>
+                    <option value="Swift">Swift</option>
+                    <option value="Go">Go</option>
+                    <option value="R">R</option>
+                    <option value="Kotlin">Kotlin</option>
+                    <option value="TypeScript">TypeScript</option>
+                    <option value="Rust">Rust</option>
+                    <option value="Perl">Perl</option>
+                    <option value="Haskell">Haskell</option>
+                    <option value="Elixir">Elixir</option>
+                    <option value="Scala">Scala</option>
+                    <option value="Objective-C">Objective-C</option>
+                    <option value="Bash">Bash</option>
+                    <option value="MATLAB">MATLAB</option>
+                    <option value="SQL">SQL</option>
+                    <option value="Dart">Dart</option>
+                    <option value="Lua">Lua</option>
+                    <option value="Cobol">Cobol</option>
+                </datalist>
+            </label>
+            <button id="add" onclick="add()">Agregar</button>
+            <button id="finish" onclick="finish()">Finalizar</button>
+        </section>
+
+        <section id="results" hidden>
+            <h2>Rama Preferida</h2>
+            <p id="select0"></p>
+            <h2>Lenguaje que quiere aprender:</h3>
+            <p id="select1"></p>
+            <h2>Donde se quiere especializar:</h2>
+            <p id="select2"></p>
+            <h2>Otras tecnologías que quiere aprender:</h2>
+            <p id="select3"></p>
+        </section>
     </main>
     
     <footer>
-
+        <a href="https://github.com/MigueBlack93">Desarrollado por Miguel Ulmi - 2024</a>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
