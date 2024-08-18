@@ -27,8 +27,6 @@ function nextPage1(){
     }
 
     cleanScreen("first", "second");
-
-    console.log(results);
 }
 
 function nextPage2(){
@@ -44,7 +42,6 @@ function nextPage2(){
     results.push(selected2);
 
     cleanScreen("second", "third");
-    console.log(results);
 }
 
 function add(){
@@ -54,8 +51,6 @@ function add(){
     results.push(selected3);
 
     clean.value = "";
-        
-    console.log(results);
 }
 
 function finish(){
